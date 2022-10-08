@@ -32,4 +32,4 @@ Deve haver os seguintes pre requisitos:
 
 
 Conectou no mongo com docker no wsl2 Ubuntu - Mas não dá para conectar do Windows
-<img src="https://github.com/ufabc-next/ufabc-next-web/blob/master/public/assets/images/reviews.png" />
+<img src="https://github.com/PatriciaKG/WebApi.DotNet/blob/master/images/imagem01.png" />
