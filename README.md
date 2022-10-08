@@ -29,3 +29,7 @@ Deve haver os seguintes pre requisitos:
 (OK)  * Código precisa estar versionado no Github
  * Precisa estar fazendo o build através do Github Actions (Continuos Integration)
 (OK)  * Utilizar Conventional Commits
+
+
+Conectou no mongo com docker no wsl2 Ubuntu - Mas não dá para conectar do Windows
+<img src="https://github.com/ufabc-next/ufabc-next-web/blob/master/public/assets/images/reviews.png" />
