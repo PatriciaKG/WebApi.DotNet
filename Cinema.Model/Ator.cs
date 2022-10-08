@@ -1,20 +1,13 @@
 namespace Cinema.Model
 {
-    public class Ator
+
+//Exemplo de OOP - Abstração
+    public class Ator:Equipe
     {
-        public Ator(string nome, Oscar[] idOscar)
+        public Ator(string nome, Oscar[] idOscar):base(nome,idOscar)
         {
-            Id = Guid.NewGuid().ToString();
-            Nome = nome;
-            IdOscar = idOscar;
 
         }
-        public string Id {get; private set;}
-
-        public string Nome {get; private set;}
-
-        public Oscar[] IdOscar {get; private set;}
-
-
+        public string AlgoAtor {get; private set;}    
     }
 }

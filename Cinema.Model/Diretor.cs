@@ -1,19 +1,14 @@
 namespace Cinema.Model
 {
-    public class Diretor
+    public class Diretor:Equipe
     {
-        public Diretor(string nome, Oscar[] idOscar)
+
+        public Diretor(string nome, Oscar[] idOscar):base(nome,idOscar)
         {
-            Id = Guid.NewGuid().ToString();
-            Nome = Nome;
-            IdOscar = IdOscar;
 
         }
-        public string Id {get; private set;}
-
-        public string Nome {get; private set;}
-
-        public Oscar[] IdOscar {get; private set;}
+        
+        public string AlgoDiretor {get; private set;}
 
 
     }
