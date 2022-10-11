@@ -2,6 +2,7 @@ namespace Cinema.Model
 {
     public class CategoriaOscar
     {
+        // Pilares OOP - encapusulamento
         public CategoriaOscar(string descricao)
         {
             Id = Guid.NewGuid().ToString();

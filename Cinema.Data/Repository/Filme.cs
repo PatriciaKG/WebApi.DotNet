@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using MongoDB.Driver;
 using Cinema.Model;
 using Cinema.Data.Config;
+using Cinema.Data.Interface;
 
 namespace Cinema.Data.Repository
 {
-    public class Filme
+    public class Filme: IFilme
     {
-        private readonly IMongoCollection<Filme> _filmes;
+        private readonly IMongoCollection<Model.Filme> _filmes;
 
-        public FilmeRepository(IDatabaseConfig DataBaseConfig)
+        public Filme(IDatabaseConfig DataBaseConfig)
         {
-                var client = new MongoClient(DataBaseConfig.ConnectionString);
-                var database = client.GetDatabase(DataBaseConfig.DatabaseName);
+            var client = new MongoClient(DataBaseConfig.ConnectionString);
+            var database = client.GetDatabase(DataBaseConfig.DatabaseName);
 
-                _filmes = database.GetCollection<Filme>("Filme");
+            _filmes = database.GetCollection<Model.Filme>("TabelaFilme");
         }
 
-        public bool Add(Filme filme)
+        public bool Add(Model.Filme filme)
         {              
             try
             {
@@ -32,17 +33,17 @@ namespace Cinema.Data.Repository
             }            
         }
 
-        public void Update(string id, Filme filme)
+        public void Update(string id, Model.Filme UpdateFilme)
         {
-            _filmes.ReplaceOne(filme => filme.Id == id, UpdatedFilme);
+            _filmes.ReplaceOne(oFilme => oFilme.Id == id, UpdateFilme);
         }
 
-        public IEnumerable<Filme> Get()
+        public IEnumerable<Model.Filme> Get()
         {
             return _filmes.Find(filme => true).ToList();
         }
 
-        public Filme Get(string id)
+        public Model.Filme Get(string id)
         {
             return _filmes.Find(filme => filme.Id == id).FirstOrDefault();
         }

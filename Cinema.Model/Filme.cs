@@ -15,6 +15,7 @@
                 PretoBranco = pretoBranco;
                 Categoria = categoria;
                 DataCadastro = DateTime.Now;
+                DataAlteracao = DateTime.Now;
 
             }
 
@@ -35,6 +36,23 @@
             public CategoriaFilme Categoria {get; private set;}
 
             public DateTime DataCadastro {get; private set;}
+
+            public DateTime DataAlteracao {get; private set;}
+
+            public void AlteraFilme(string nome, string sinopse, int anoEstreia, Diretor[] idDiretor, Ator[] idAtor, bool pretoBranco, CategoriaFilme categoria)
+            {
+
+                Id = Guid.NewGuid().ToString();
+                Nome = nome;
+                Sinopse = sinopse;
+                AnoEstreia = anoEstreia;
+                IdDiretor = idDiretor;
+                IdAtor = idAtor;
+                PretoBranco = pretoBranco;
+                Categoria = categoria;
+                DataAlteracao = DateTime.Now;
+
+            }
 
     }
 }

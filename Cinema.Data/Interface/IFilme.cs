@@ -4,11 +4,12 @@ using Cinema.Model;
 
 namespace Cinema.Data.Interface
 {
+    //Pilar OOP - Abstração
     public interface IFilme
-{
+    {   
         bool Add(Filme filme);
 
-        bool Update(string id, Filme filme);
+        void Update(string id, Filme filme);
 
         IEnumerable<Filme> Get();
         
@@ -16,6 +17,6 @@ namespace Cinema.Data.Interface
 
         void Delete(string id);
 
-}
+    }
 
 }
