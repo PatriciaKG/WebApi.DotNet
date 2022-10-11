@@ -27,7 +27,7 @@ Deve haver os seguintes pre requisitos:
 
  
 (OK)  * Código precisa estar versionado no Github
- * Precisa estar fazendo o build através do Github Actions (Continuos Integration)
+(OK)  * Precisa estar fazendo o build através do Github Actions (Continuos Integration)
 (OK)  * Utilizar Conventional Commits
 
 
