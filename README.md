@@ -31,5 +31,4 @@ Deve haver os seguintes pre requisitos:
 (OK)  * Utilizar Conventional Commits
 
 
-Conectou no mongo com docker no wsl2 Ubuntu - Mas não dá para conectar do Windows
-<img src="https://github.com/PatriciaKG/WebApi.DotNet/blob/master/images/imagem01.png" />
+
